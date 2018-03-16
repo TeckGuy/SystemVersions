@@ -1,5 +1,7 @@
 					       Pharmacy Management System Versions  
 							 Developed by 
-						    http://tecksolke.com/
+							 
+						    https://tecksolke.com/
+
 					   This are different versions of the system
 						       Order Your Version
