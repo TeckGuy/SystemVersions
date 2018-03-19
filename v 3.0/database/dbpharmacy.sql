@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2018 at 12:31 PM
+-- Generation Time: Mar 19, 2018 at 08:29 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -44,8 +44,7 @@ CREATE TABLE `adminlogin` (
 --
 
 INSERT INTO `adminlogin` (`NationalID`, `username`, `personalnumber`, `password`, `Salary`, `Payed`, `Balance`, `LastEdited`) VALUES
-(31407936, 'TechGuy', '6668', '93f725a07423fe1c889f448b33d21f46', 10000, 1000, 9000, 'Monday, 01 January 2018, 05:07:09.141 PM'),
-(87654321, 'mercy', '777', NULL, 7000, NULL, 7000, 'Friday, 05 January 2018, 09:45:53.525 AM');
+(31407936, 'TechGuy', '6668', '9066704f28272d74038923fa685ecf795dc154ea63f761db337552a50fdf61e0327dd7479b95e9592b4e59193c2620f4', 10000, 2222, 7778, 'Monday, 15 January 2018, 10:14:46.626 PM');
 
 -- --------------------------------------------------------
 
@@ -66,6 +65,13 @@ CREATE TABLE `pastrecords` (
   `Loss` double NOT NULL,
   `LastEdited` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pastrecords`
+--
+
+INSERT INTO `pastrecords` (`Mname`, `Mserial`, `StockIn`, `TaxIn`, `StockInCost`, `StockOut`, `TaxOut`, `StockOutCost`, `Profit`, `Loss`, `LastEdited`) VALUES
+('fdf', 'dfd', 55, 0, 3025, 0, 0, 0, 0, 3025, 'Monday, 19 March 2018, 10:16:54.299 PM');
 
 -- --------------------------------------------------------
 
@@ -88,7 +94,7 @@ CREATE TABLE `paymentrecords` (
 --
 
 INSERT INTO `paymentrecords` (`Cname`, `CIdentity`, `Tcost`, `Payed`, `Balance`, `Dpayed`, `LastEdited`) VALUES
-('45', '54', 286492.16, 200, 286292.16, '2018-01-14', 'Sunday, 14 January 2018, 02:18:12.413 PM');
+('dd', 'dd', 1089, 900, 189, '2018-03-19', 'Monday, 19 March 2018, 10:15:00.968 PM');
 
 -- --------------------------------------------------------
 
@@ -119,8 +125,8 @@ CREATE TABLE `store` (
 --
 
 INSERT INTO `store` (`Mname`, `Mserial`, `Mquantity`, `Mcost`, `TotalTax`, `Mtotalcost`, `Medate`, `Msection`, `Mprescription`, `Mdistributer`, `Mcategory`, `Mreport`, `TaxType`, `UpdatedOn`, `LastEdited`) VALUES
-('54', '45', 532, 454, 38644.48000000001, 280172.48, '2018-01-31', 'Display', '45', '45', '54', '54', 'Taxable', 'Sunday, 14 January 2018, 01:48:03.387 PM', 'Sunday, 14 January 2018, 01:48:03.387 PM'),
-('tt', 'tt', 35, 544, 0, 19040, '2018-01-31', 'Display', 'tt', 'tt', 'tt', 'ttt', 'Non-taxable', 'Sunday, 14 January 2018, 01:48:03.387 PM', 'Sunday, 14 January 2018, 01:48:03.387 PM');
+('dd', 'ddd', 21, 33, 0, 693, '2018-03-31', 'Dispensary', 'ddd', 'dd', 'dd', 'ddd', 'Non-taxable', 'Monday, 19 March 2018, 10:19:40.327 PM', 'Monday, 19 March 2018, 10:05:21.313 PM'),
+('rr', 'rr', 13, 33, 68.96, 429, '2018-01-30', 'Display', 'rr', 'rr', 'rr', 'dddd', 'Taxable', 'Monday, 19 March 2018, 10:19:40.327 PM', 'Sunday, 21 January 2018, 09:16:32.105 PM');
 
 -- --------------------------------------------------------
 
@@ -148,8 +154,8 @@ CREATE TABLE `tablecritical` (
 --
 
 INSERT INTO `tablecritical` (`Mname`, `Mserial`, `StockIn`, `TaxIn`, `StockInCost`, `StockOut`, `TaxOut`, `StockOutCost`, `Profit`, `Loss`, `UpdatedOn`, `LastEdited`) VALUES
-('54', '45', 544, 39516.16, 286492.16, 12, 871.6800000000001, 6319.68, 0, 280172.48, 'Sunday, 14 January 2018, 02:29:46.347 PM', 'Sunday, 14 January 2018, 01:48:36.575 PM'),
-('tt', 'tt', 45, 0, 24480, 10, 0, 5440, 0, 19040, 'Sunday, 14 January 2018, 02:29:46.347 PM', 'Sunday, 14 January 2018, 01:48:36.575 PM');
+('dd', 'ddd', 33, 0, 1089, 12, 0, 396, 0, 693, 'Monday, 19 March 2018, 10:25:36.796 PM', 'Monday, 19 March 2018, 10:13:25.070 PM'),
+('rr', 'rr', 33, 174.24, 1263.24, 20, 105.28, 763.2800000000001, 0, 499.9599999999999, 'Monday, 19 March 2018, 10:25:36.796 PM', 'Sunday, 28 January 2018, 06:02:10.349 PM');
 
 -- --------------------------------------------------------
 
@@ -173,9 +179,9 @@ CREATE TABLE `tabledistributers` (
 --
 
 INSERT INTO `tabledistributers` (`Mserial`, `Dname`, `Mname`, `Mquantity`, `Mtotalcost`, `Payed`, `Balance`, `LastEdited`) VALUES
-('45', '45', '54', 544, 286492.16, 200, 286292.16, 'Sunday, 14 January 2018, 02:18:12.413 PM'),
-('r', 'rr', 'r', 200, 116000, NULL, 116000, 'Sunday, 14 January 2018, 10:53:23.466 AM'),
-('tt', 'tt', 'tt', 45, 24480, NULL, 24480, 'Sunday, 14 January 2018, 01:48:03.387 PM');
+('ddd', 'dd', 'dd', 33, 1089, 900, 189, 'Monday, 19 March 2018, 10:15:00.968 PM'),
+('dfd', 'fdfd', 'fdf', 55, 3025, NULL, 3025, 'Monday, 19 March 2018, 10:15:35.117 PM'),
+('rr', 'rr', 'rr', 33, 1263.24, NULL, 1263.24, 'Sunday, 21 January 2018, 09:16:32.105 PM');
 
 -- --------------------------------------------------------
 
@@ -204,11 +210,13 @@ CREATE TABLE `tablesell` (
 --
 
 INSERT INTO `tablesell` (`Mname`, `Mserial`, `Mtotalquantity`, `Bcost`, `Mcost`, `TotalTax`, `Tamount`, `Mtotalcost`, `CashPaid`, `ChangePaid`, `Msolddate`, `LastEdited`, `Invoice`) VALUES
-('54', '45', 3, 454, 454, 217.92000000000002, 1362, 1579.92, 1500, 138, '2018-01-14', 'Sunday, 14 January 2018, 02:02:40.605 PM', '1735476555'),
-('tt', 'tt', 5, 544, 544, 0, 2720, 2720, 3000, 280, '2018-01-14', 'Sunday, 14 January 2018, 02:07:04.937 PM', '-824536157'),
-('54', '45', 5, 454, 454, 363.2, 2270, 2633.2, 3000, 730, '2018-01-14', 'Sunday, 14 January 2018, 02:09:08.351 PM', '-1697413891'),
-('tt', 'tt', 5, 544, 544, 0, 2720, 2720, 3000, 280, '2018-01-14', 'Sunday, 14 January 2018, 02:13:28.654 PM', '1230456903'),
-('54', '45', 4, 454, 454, 290.56, 1816, 2106.56, 2000, 184, '2018-01-14', 'Sunday, 14 January 2018, 02:13:47.655 PM', '-239612944');
+('rr', 'rr', 4, 33, 33, 21.12, 132, 153.12, 150, 18, '2018-01-21', 'Sunday, 21 January 2018, 09:16:55.857 PM', '2061721806'),
+('rr', 'rr', 6, 33, 33, 31.68, 198, 229.68, 200, 2, '2018-01-21', 'Sunday, 21 January 2018, 09:19:12.015 PM', '-918030527'),
+('rr', 'rr', 5, 33, 33, 26.400000000000002, 165, 191.4, 200, 35, '2018-01-21', 'Sunday, 21 January 2018, 09:26:00.047 PM', '164494844'),
+('rr', 'rr', 3, 33, 33, 15.84, 99, 114.84, 100, 1, '2018-01-21', 'Sunday, 21 January 2018, 09:56:44.701 PM', '-822946564'),
+('', 'rr', 2, 0, 32, 10.24, 64, 74.24, 323232, 323168, '2018-03-19', 'Monday, 19 March 2018, 09:34:44.647 PM', '284222060'),
+('dd', 'ddd', 4, 33, 33, 0, 132, 132, 200, 68, '2018-03-19', 'Monday, 19 March 2018, 10:09:56.150 PM', '759125831'),
+('dd', 'ddd', 8, 33, 33, 0, 264, 264, 844, 580, '2018-03-19', 'Monday, 19 March 2018, 10:11:39.257 PM', '1993969601');
 
 -- --------------------------------------------------------
 
@@ -229,8 +237,8 @@ CREATE TABLE `tablestockin` (
 --
 
 INSERT INTO `tablestockin` (`Mname`, `Mserial`, `Mtotalquantity`, `TotalTax`, `Mtotalcost`) VALUES
-('54', '45', 544, 39516.16, 286492.16),
-('tt', 'tt', 45, 0, 24480);
+('dd', 'ddd', 33, 0, 1089),
+('rr', 'rr', 33, 174.24, 1263.24);
 
 -- --------------------------------------------------------
 
@@ -254,7 +262,7 @@ CREATE TABLE `userlogin` (
 --
 
 INSERT INTO `userlogin` (`NationalID`, `username`, `personalnumber`, `password`, `Salary`, `Payed`, `Balance`, `LastEdited`) VALUES
-(12345678, 'TechUser', '6668', '93f725a07423fe1c889f448b33d21f46', 5000, 1090, 3910, 'Wednesday, 03 January 2018, 09:58:19.925 PM');
+(12345678, 'Max', '6668', '8cafed2235386cc5855e75f0d34f103ccc183912e5f02446b77c66539f776e4bf2bf87339b4518a7cb1c2441c568b0f8', 5000, NULL, 5000, 'Tuesday, 06 February 2018, 04:24:42.708 PM');
 
 --
 -- Indexes for dumped tables
