@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2018 at 07:50 AM
+-- Generation Time: Apr 07, 2018 at 07:56 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -143,6 +143,13 @@ CREATE TABLE `systemtimer` (
   `Timer` date NOT NULL,
   `SecretCode` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `systemtimer`
+--
+
+INSERT INTO `systemtimer` (`ID`, `Timer`, `SecretCode`) VALUES
+(1, '2018-04-07', '29b6e1dbc5e0aafe408791fbd1c3a14695cfb515201b2e1878ef8df3f8d1f82b84a2a656cfcc25c04842c50b43773da6eed9c90e1b1ea6937bea594cefede13a');
 
 -- --------------------------------------------------------
 
@@ -376,7 +383,7 @@ ALTER TABLE `store`
 -- AUTO_INCREMENT for table `systemtimer`
 --
 ALTER TABLE `systemtimer`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tablecritical`
