@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2018 at 10:01 PM
+-- Generation Time: Apr 07, 2018 at 07:50 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -67,6 +67,13 @@ CREATE TABLE `pastrecords` (
   `LastEdited` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `pastrecords`
+--
+
+INSERT INTO `pastrecords` (`ID`, `Mname`, `Mserial`, `StockIn`, `TaxIn`, `StockInCost`, `StockOut`, `TaxOut`, `StockOutCost`, `Profit`, `Loss`, `LastEdited`) VALUES
+(1, 'Test123', 'Test123', 200, 1600, 11600, 0, 0, 0, 0, 11600, 'Saturday, 07 April 2018, 08:49:07.221 AM');
+
 -- --------------------------------------------------------
 
 --
@@ -83,6 +90,13 @@ CREATE TABLE `paymentrecords` (
   `Dpayed` date NOT NULL,
   `LastEdited` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `paymentrecords`
+--
+
+INSERT INTO `paymentrecords` (`ID`, `Cname`, `CIdentity`, `Tcost`, `Payed`, `Balance`, `Dpayed`, `LastEdited`) VALUES
+(1, 'Test123', 'Test123', 11600, 100, 11500, '2018-04-07', 'Saturday, 07 April 2018, 08:49:29.262 AM');
 
 -- --------------------------------------------------------
 
@@ -115,7 +129,8 @@ CREATE TABLE `store` (
 --
 
 INSERT INTO `store` (`ID`, `Mname`, `Mserial`, `Mquantity`, `BuyingPrice`, `Mcost`, `TotalTax`, `Mtotalcost`, `Medate`, `Msection`, `Mprescription`, `Mdistributer`, `Mcategory`, `Mreport`, `TaxType`, `UpdatedOn`, `LastEdited`) VALUES
-(1, 'Test123', 'serial_Test12', 500, 20, 20, 1600, 11600, '2018-04-30', 'Display', '1x1', 'Chama', 'cruzer', 'Cool time', 'Taxable', 'Thursday, 05 April 2018, 06:04:36.050 PM', 'Thursday, 05 April 2018, 06:04:36.050 PM');
+(1, 'GTR', 'GTR', 300, 20, 20, 960, 6960, '2018-04-30', 'Display', '1x1', 'japan', 'racing car', 'Cool staff', 'Taxable', 'Saturday, 07 April 2018, 08:46:26.613 AM', 'Saturday, 07 April 2018, 08:46:26.613 AM'),
+(2, 'Lamborghini', 'veneno', 470, 20, 20, 0, 9400, '2018-04-30', 'Control Drugs', '1x3', 'Italy', 'generic', 'Italian car', 'Non-taxable', 'Saturday, 07 April 2018, 08:46:26.613 AM', 'Saturday, 07 April 2018, 08:46:26.613 AM');
 
 -- --------------------------------------------------------
 
@@ -128,13 +143,6 @@ CREATE TABLE `systemtimer` (
   `Timer` date NOT NULL,
   `SecretCode` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `systemtimer`
---
-
-INSERT INTO `systemtimer` (`ID`, `Timer`, `SecretCode`) VALUES
-(1, '2018-04-05', '0ff4783b0b9e4e2e4fe97f80669860b27b8ca221344b07ccb312082830be26138188cdd2acb735dc806d4c2b3ecdc410b735d65bfa8b148ca94994aecd17d2fa');
 
 -- --------------------------------------------------------
 
@@ -163,7 +171,8 @@ CREATE TABLE `tablecritical` (
 --
 
 INSERT INTO `tablecritical` (`ID`, `Mname`, `Mserial`, `StockIn`, `TaxIn`, `StockInCost`, `StockOut`, `TaxOut`, `StockOutCost`, `Profit`, `Loss`, `UpdatedOn`, `LastEdited`) VALUES
-(1, 'Test123', 'serial_Test12', 500, 1600, 11600, 0, 0, 0, 0, 11600, 'Thursday, 05 April 2018, 06:09:51.266 PM', 'Thursday, 05 April 2018, 06:09:35.729 PM');
+(1, 'GTR', 'GTR', 300, 960, 6960, 0, 0, 0, 0, 6960, 'Saturday, 07 April 2018, 08:49:07.221 AM', 'Saturday, 07 April 2018, 08:49:07.221 AM'),
+(2, 'Lamborghini', 'veneno', 500, 0, 10000, 30, 0, 600, 0, 9400, 'Saturday, 07 April 2018, 08:49:07.221 AM', 'Saturday, 07 April 2018, 08:49:07.221 AM');
 
 -- --------------------------------------------------------
 
@@ -188,7 +197,9 @@ CREATE TABLE `tabledistributers` (
 --
 
 INSERT INTO `tabledistributers` (`ID`, `Mserial`, `Dname`, `Mname`, `Mquantity`, `Mtotalcost`, `Payed`, `Balance`, `LastEdited`) VALUES
-(1, 'serial_Test12', 'Chama', 'Test123', 500, 11600, NULL, 11600, 'Thursday, 05 April 2018, 06:04:36.050 PM');
+(1, 'GTR', 'japan', 'GTR', 300, 6960, NULL, 6960, 'Saturday, 07 April 2018, 08:46:26.613 AM'),
+(2, 'veneno', 'Italy', 'Lamborghini', 500, 10000, NULL, 10000, 'Saturday, 07 April 2018, 08:46:26.613 AM'),
+(3, 'Test123', 'Test123', 'Test123', 200, 11600, 100, 11500, 'Saturday, 07 April 2018, 08:49:29.262 AM');
 
 -- --------------------------------------------------------
 
@@ -213,6 +224,13 @@ CREATE TABLE `tablesell` (
   `Invoice` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tablesell`
+--
+
+INSERT INTO `tablesell` (`ID`, `Mname`, `Mserial`, `Mtotalquantity`, `Bcost`, `Mcost`, `TotalTax`, `Tamount`, `Mtotalcost`, `CashPaid`, `ChangePaid`, `Msolddate`, `LastEdited`, `Invoice`) VALUES
+(1, 'Lamborghini', 'veneno', 30, 20, 20, 0, 600, 600, 600, 0, '2018-04-07', 'Saturday, 07 April 2018, 08:48:13.385 AM', '-883869664');
+
 -- --------------------------------------------------------
 
 --
@@ -233,7 +251,8 @@ CREATE TABLE `tablestockin` (
 --
 
 INSERT INTO `tablestockin` (`ID`, `Mname`, `Mserial`, `Mtotalquantity`, `TotalTax`, `Mtotalcost`) VALUES
-(1, 'Test123', 'serial_Test12', 500, 1600, 11600);
+(1, 'GTR', 'GTR', 300, 960, 6960),
+(2, 'Lamborghini', 'veneno', 500, 0, 10000);
 
 -- --------------------------------------------------------
 
@@ -251,6 +270,13 @@ CREATE TABLE `userlogin` (
   `Balance` double DEFAULT NULL,
   `LastEdited` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userlogin`
+--
+
+INSERT INTO `userlogin` (`NationalID`, `username`, `personalnumber`, `password`, `Salary`, `Payed`, `Balance`, `LastEdited`) VALUES
+(12345678, 'Test123', '123', '8cafed2235386cc5855e75f0d34f103ccc183912e5f02446b77c66539f776e4bf2bf87339b4518a7cb1c2441c568b0f8', 3000, NULL, 3000, 'Saturday, 07 April 2018, 08:07:35.839 AM');
 
 --
 -- Indexes for dumped tables
@@ -332,49 +358,49 @@ ALTER TABLE `userlogin`
 -- AUTO_INCREMENT for table `pastrecords`
 --
 ALTER TABLE `pastrecords`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `paymentrecords`
 --
 ALTER TABLE `paymentrecords`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `systemtimer`
 --
 ALTER TABLE `systemtimer`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tablecritical`
 --
 ALTER TABLE `tablecritical`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tabledistributers`
 --
 ALTER TABLE `tabledistributers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tablesell`
 --
 ALTER TABLE `tablesell`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tablestockin`
 --
 ALTER TABLE `tablestockin`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
