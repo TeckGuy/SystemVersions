@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2018 at 05:16 PM
+-- Generation Time: Apr 10, 2018 at 09:07 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -96,7 +96,8 @@ CREATE TABLE `paymentrecords` (
 --
 
 INSERT INTO `paymentrecords` (`ID`, `Cname`, `CIdentity`, `Tcost`, `Payed`, `Balance`, `Dpayed`, `LastEdited`) VALUES
-(1, 'Test123', 'Test123', 11600, 100, 11500, '2018-04-07', 'Saturday, 07 April 2018, 08:49:29.262 AM');
+(1, 'Test123', 'Test123', 11600, 100, 11500, '2018-04-07', 'Saturday, 07 April 2018, 08:49:29.262 AM'),
+(2, 'Test123', '12345678', 3000, 100, 2900, '2018-04-10', 'Tuesday, 10 April 2018, 09:38:08.425 AM');
 
 -- --------------------------------------------------------
 
@@ -129,10 +130,11 @@ CREATE TABLE `store` (
 --
 
 INSERT INTO `store` (`ID`, `Mname`, `Mserial`, `Mquantity`, `BuyingPrice`, `Mcost`, `TotalTax`, `Mtotalcost`, `Medate`, `Msection`, `Mprescription`, `Mdistributer`, `Mcategory`, `Mreport`, `TaxType`, `UpdatedOn`, `LastEdited`) VALUES
-(1, 'GTR', 'GTR', 242, 20, 20, 774.4, 5614.4, '2018-04-30', 'Display', '1x1', 'japan', 'racing car', 'Cool staff', 'Taxable', 'Saturday, 07 April 2018, 08:46:26.613 AM', 'Saturday, 07 April 2018, 08:46:26.613 AM'),
+(1, 'GTR', 'GTR', 232, 20, 20, 742.4, 5382.4, '2018-04-30', 'Display', '1x1', 'japan', 'racing car', 'Cool staff', 'Taxable', 'Saturday, 07 April 2018, 08:46:26.613 AM', 'Saturday, 07 April 2018, 08:46:26.613 AM'),
 (2, 'Lamborghini', 'veneno', 470, 20, 20, 0, 9400, '2018-04-30', 'Control Drugs', '1x3', 'Italy', 'generic', 'Italian car', 'Non-taxable', 'Saturday, 07 April 2018, 08:46:26.613 AM', 'Saturday, 07 April 2018, 08:46:26.613 AM'),
-(3, 'Test123', 'rev', 20, 10, 10, 32, 224, '2018-04-30', 'Display', '1x3', 'boom', 'java', 'java', 'Taxable', 'Sunday, 08 April 2018, 05:13:03.187 PM', 'Sunday, 08 April 2018, 05:13:03.187 PM'),
-(4, 'tets', 'fdf', 18, 10, 10, 28.799999999999997, 208.8, '2018-04-23', 'Dispensary', 'dffd', 'dfd', 'dfd', 'rerer', 'Taxable', 'Sunday, 08 April 2018, 05:31:32.470 PM', 'Sunday, 08 April 2018, 05:31:32.470 PM');
+(3, 'Test123', 'rev', 13, 10, 10, 20.8, 142.8, '2018-04-30', 'Display', '1x3', 'boom', 'java', 'java', 'Taxable', 'Sunday, 08 April 2018, 05:13:03.187 PM', 'Sunday, 08 April 2018, 05:13:03.187 PM'),
+(4, 'tets', 'fdf', 20, 10, 10, 31.999999999999996, 232, '2018-04-04', 'Dispensary', 'dffd', 'dfd', 'dfd', 'rerer', 'Taxable', 'Sunday, 08 April 2018, 05:31:32.470 PM', 'Sunday, 08 April 2018, 05:31:32.470 PM'),
+(5, 'rrrrrrr', 'rrrrrrr', 30, 10, 10, 48, 348, '2018-04-10', 'Dispensary', 'rrrrrrr', 'rrrrrrr', 'rrrrrrr', 'rrrrrrr', 'Taxable', 'Tuesday, 10 April 2018, 09:59:25.075 AM', 'Tuesday, 10 April 2018, 09:59:25.075 AM');
 
 -- --------------------------------------------------------
 
@@ -152,7 +154,7 @@ CREATE TABLE `systemtimer` (
 --
 
 INSERT INTO `systemtimer` (`ID`, `Timer`, `SystemLimit`, `SecretCode`) VALUES
-(1, '2018-04-09', 'Sunday, 08 April 2018', '07a5706c5ab1da599066b5ec29bb1e9c70c4423199a847ad53fa3e938bf646f9e6341f6ea74400efa1058579c8fb7a5b9aef6e823750dfb5b8f9c6b3c4c8aa13');
+(1, '2018-04-11', 'Tuesday, 10 April 2018', 'd9adf9b1e13d06c26d749b3f8b641718fa97da6e534974caea77af5d85382417ab3453694819e9aed297e26eaf0710686952fc7204dc4cb24236d99a4d7acda2');
 
 -- --------------------------------------------------------
 
@@ -181,10 +183,10 @@ CREATE TABLE `tablecritical` (
 --
 
 INSERT INTO `tablecritical` (`ID`, `Mname`, `Mserial`, `StockIn`, `TaxIn`, `StockInCost`, `StockOut`, `TaxOut`, `StockOutCost`, `Profit`, `Loss`, `UpdatedOn`, `LastEdited`) VALUES
-(1, 'GTR', 'GTR', 300, 960, 6960, 58, 185.6, 1345.6, 0, 5614.4, 'Sunday, 08 April 2018, 06:10:56.258 PM', 'Saturday, 07 April 2018, 08:49:07.221 AM'),
-(2, 'Lamborghini', 'veneno', 500, 0, 10000, 30, 0, 600, 0, 9400, 'Sunday, 08 April 2018, 06:10:56.258 PM', 'Saturday, 07 April 2018, 08:49:07.221 AM'),
-(3, 'Test123', 'rev', 20, 32, 232, 0, 0, 0, 0, 232, 'Sunday, 08 April 2018, 06:10:56.258 PM', 'Sunday, 08 April 2018, 05:14:06.642 PM'),
-(4, 'tets', 'fdf', 20, 32, 232, 2, 3.2, 23.2, 0, 208.8, 'Sunday, 08 April 2018, 06:10:56.258 PM', 'Sunday, 08 April 2018, 05:39:15.690 PM');
+(1, 'GTR', 'GTR', 300, 960, 6960, 68, 217.6, 1577.6, 0, 5382.4, 'Tuesday, 10 April 2018, 09:56:44.384 AM', 'Saturday, 07 April 2018, 08:49:07.221 AM'),
+(2, 'Lamborghini', 'veneno', 500, 0, 10000, 0, 0, 0, 0, 10000, 'Tuesday, 10 April 2018, 09:56:44.384 AM', 'Saturday, 07 April 2018, 08:49:07.221 AM'),
+(3, 'Test123', 'rev', 20, 32, 232, 7, 11.2, 81.2, 0, 150.8, 'Tuesday, 10 April 2018, 09:56:44.384 AM', 'Sunday, 08 April 2018, 05:14:06.642 PM'),
+(4, 'tets', 'fdf', 20, 32, 232, 0, 0, 0, 0, 232, 'Tuesday, 10 April 2018, 09:56:44.384 AM', 'Sunday, 08 April 2018, 05:39:15.690 PM');
 
 -- --------------------------------------------------------
 
@@ -213,7 +215,8 @@ INSERT INTO `tabledistributers` (`ID`, `Mserial`, `Dname`, `Mname`, `Mquantity`,
 (2, 'veneno', 'Italy', 'Lamborghini', 500, 10000, NULL, 10000, 'Saturday, 07 April 2018, 08:46:26.613 AM'),
 (3, 'Test123', 'Test123', 'Test123', 200, 11600, 100, 11500, 'Saturday, 07 April 2018, 08:49:29.262 AM'),
 (4, 'rev', 'boom', 'Test123', 20, 232, NULL, 232, 'Sunday, 08 April 2018, 05:13:03.187 PM'),
-(5, 'fdf', 'dfd', 'tets', 20, 232, NULL, 232, 'Sunday, 08 April 2018, 05:31:32.470 PM');
+(5, 'fdf', 'dfd', 'tets', 20, 232, NULL, 232, 'Sunday, 08 April 2018, 05:31:32.470 PM'),
+(6, 'rrrrrrr', 'rrrrrrr', 'rrrrrrr', 30, 348, NULL, 348, 'Tuesday, 10 April 2018, 09:59:25.075 AM');
 
 -- --------------------------------------------------------
 
@@ -243,10 +246,12 @@ CREATE TABLE `tablesell` (
 --
 
 INSERT INTO `tablesell` (`ID`, `Mname`, `Mserial`, `Mtotalquantity`, `Bcost`, `Mcost`, `TotalTax`, `Tamount`, `Mtotalcost`, `CashPaid`, `ChangePaid`, `Msolddate`, `LastEdited`, `Invoice`) VALUES
-(1, 'Lamborghini', 'veneno', 30, 20, 20, 0, 600, 600, 600, 0, '2018-04-07', 'Saturday, 07 April 2018, 08:48:13.385 AM', '-883869664'),
-(7, 'tets', 'fdf', 2, 10, 10, 3.2, 20, 23.2, 20, 0, '2018-04-08', 'Sunday, 08 April 2018, 06:03:37.413 PM', '-10446231606:37'),
 (8, 'GTR', 'GTR', 3, 20, 20, 9.600000000000001, 60, 69.6, 60, 0, '2018-04-08', 'Sunday, 08 April 2018, 06:04:38.522 PM', '27727515522'),
-(10, 'GTR', 'GTR', 55, 20, 20, 176, 1100, 1276, 1100, 0, '2018-04-08', 'Sunday, 08 April 2018, 06:10:20.379 PM', '-1188941395379');
+(10, 'GTR', 'GTR', 55, 20, 20, 176, 1100, 1276, 1100, 0, '2018-04-09', 'Sunday, 09 April 2018, 06:10:20.379 PM', '-1188941395379'),
+(11, 'GTR', 'GTR', 10, 20, 20, 32, 200, 232, 200, 0, '2018-04-08', 'Sunday, 08 April 2018, 06:35:00.779 PM', '884418576779'),
+(12, 'Test123', 'rev', 2, 10, 10, 3.2, 20, 23.2, 20, 0, '2018-04-08', 'Sunday, 08 April 2018, 06:37:12.659 PM', '-2138234097659'),
+(13, 'Test123', 'rev', 5, 10, 10, 8, 50, 58, 50, 0, '2018-04-10', 'Tuesday, 10 April 2018, 09:48:03.922 AM', '1563909182922'),
+(14, 'Lamborghini', 'veneno', 30, 20, 20, 0, 600, 600, 700, 100, '2018-04-10', 'Tuesday, 10 April 2018, 10:01:21.993 AM', '1215197894993');
 
 -- --------------------------------------------------------
 
@@ -271,7 +276,8 @@ INSERT INTO `tablestockin` (`ID`, `Mname`, `Mserial`, `Mtotalquantity`, `TotalTa
 (1, 'GTR', 'GTR', 300, 960, 6960),
 (2, 'Lamborghini', 'veneno', 500, 0, 10000),
 (3, 'Test123', 'rev', 20, 32, 232),
-(4, 'tets', 'fdf', 20, 32, 232);
+(4, 'tets', 'fdf', 20, 32, 232),
+(5, 'rrrrrrr', 'rrrrrrr', 30, 48, 348);
 
 -- --------------------------------------------------------
 
@@ -295,7 +301,7 @@ CREATE TABLE `userlogin` (
 --
 
 INSERT INTO `userlogin` (`NationalID`, `username`, `personalnumber`, `password`, `Salary`, `Payed`, `Balance`, `LastEdited`) VALUES
-(12345678, 'Test123', '123', '8cafed2235386cc5855e75f0d34f103ccc183912e5f02446b77c66539f776e4bf2bf87339b4518a7cb1c2441c568b0f8', 3000, NULL, 3000, 'Saturday, 07 April 2018, 08:07:35.839 AM');
+(12345678, 'Test123', '123', '8cafed2235386cc5855e75f0d34f103ccc183912e5f02446b77c66539f776e4bf2bf87339b4518a7cb1c2441c568b0f8', 3000, 100, 2900, 'Tuesday, 10 April 2018, 09:38:08.425 AM');
 
 --
 -- Indexes for dumped tables
@@ -383,13 +389,13 @@ ALTER TABLE `pastrecords`
 -- AUTO_INCREMENT for table `paymentrecords`
 --
 ALTER TABLE `paymentrecords`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `store`
 --
 ALTER TABLE `store`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `systemtimer`
@@ -407,19 +413,19 @@ ALTER TABLE `tablecritical`
 -- AUTO_INCREMENT for table `tabledistributers`
 --
 ALTER TABLE `tabledistributers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tablesell`
 --
 ALTER TABLE `tablesell`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tablestockin`
 --
 ALTER TABLE `tablestockin`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
