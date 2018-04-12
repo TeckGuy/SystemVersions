@@ -6,4 +6,4 @@
                                   5.Start using the system.
                                   6.Any problem contact 0713255791.
 								  
-								  SETUP INSTALLATION PASSWORD IS ........
+								  SETUP INSTALLATION PASSWORD IS {1234554321}

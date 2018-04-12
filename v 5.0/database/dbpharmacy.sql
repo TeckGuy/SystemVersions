@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2018 at 10:28 AM
+-- Generation Time: Apr 12, 2018 at 03:30 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -44,7 +44,7 @@ CREATE TABLE `adminlogin` (
 --
 
 INSERT INTO `adminlogin` (`NationalID`, `username`, `personalnumber`, `password`, `Salary`, `Payed`, `Balance`, `LastEdited`) VALUES
-(31407936, 'TechGuy', '6668', '411c421547c72abf0fd9cb8d0d0f960b19ac74d1f2728ba9e8ab7d156b8dc6ca287a358a0a9e21c5598ea2ead7736a51', 10000, 2222, 7778, 'Monday, 15 January 2018, 10:14:46.626 PM');
+(31407936, 'TechGuy', '6668', '411c421547c72abf0fd9cb8d0d0f960b19ac74d1f2728ba9e8ab7d156b8dc6ca287a358a0a9e21c5598ea2ead7736a51', 10000, 10000, 0, 'Wednesday, 11 April 2018, 06:27:47.566 PM');
 
 -- --------------------------------------------------------
 
@@ -114,9 +114,7 @@ INSERT INTO `pastsoldrecords` (`ID`, `Mname`, `Mserial`, `Mtotalquantity`, `Bcos
 (3, '1111', '11111', 1, 111, 111, 17.76, 111, 128.76, 111, 0, '2018-04-11', 'Wednesday, 11 April 2018, 10:04:55.726 AM', '1204189708726'),
 (4, '1111', '11111', 1, 111, 111, 17.76, 111, 128.76, 1111, 1000, '2018-04-11', 'Wednesday, 11 April 2018, 10:05:05.992 AM', '677660523992'),
 (6, '1111', '11111', 1, 111, 111, 17.76, 111, 128.76, 111, 0, '2018-04-11', 'Wednesday, 11 April 2018, 10:05:35.426 AM', '1963116115426'),
-(7, '1111', '11111', 1, 111, 111, 17.76, 111, 128.76, 111, 0, '2018-04-11', 'Wednesday, 11 April 2018, 10:05:44.543 AM', '2112213901543'),
-(8, '1111', '11111', 1, 111, 111, 17.76, 111, 128.76, 111, 0, '2018-04-11', 'Wednesday, 11 April 2018, 10:05:53.956 AM', '-2133383690956'),
-(9, '1111', '11111', 12, 111, 111, 213.12, 1332, 1545.12, 2111, 779, '2018-04-11', 'Wednesday, 11 April 2018, 10:06:04.346 AM', '311576619346');
+(7, '1111', '11111', 1, 111, 111, 17.76, 111, 128.76, 111, 0, '2018-04-11', 'Wednesday, 11 April 2018, 10:05:44.543 AM', '2112213901543');
 
 -- --------------------------------------------------------
 
@@ -140,13 +138,11 @@ CREATE TABLE `paymentrecords` (
 --
 
 INSERT INTO `paymentrecords` (`ID`, `Cname`, `CIdentity`, `Tcost`, `Payed`, `Balance`, `Dpayed`, `LastEdited`) VALUES
-(1, 'Test123', 'Test123', 11600, 100, 11500, '2018-04-07', 'Saturday, 07 April 2018, 08:49:29.262 AM'),
-(2, 'Test123', '12345678', 3000, 100, 2900, '2018-04-10', 'Tuesday, 10 April 2018, 09:38:08.425 AM'),
-(3, 'Test123', '12345678', 3000, 600, 2400, '2018-04-10', 'Tuesday, 10 April 2018, 08:12:51.407 PM'),
-(4, 'Test123', '12345678', 3000, 2600, 400, '2018-04-10', 'Tuesday, 10 April 2018, 08:12:51.407 PM'),
-(5, 'boom', 'Test123', 232, 200, 32, '2018-04-10', 'Tuesday, 10 April 2018, 08:15:39.980 PM'),
 (6, 'rrrrrrr', 'rrrrrrr', 348, 300, 48, '2018-04-10', 'Tuesday, 10 April 2018, 08:15:39.980 PM'),
-(7, 'japan', 'GTR', 6960, 6000, 960, '2018-04-10', 'Tuesday, 10 April 2018, 08:15:39.980 PM');
+(7, 'japan', 'GTR', 6960, 6000, 960, '2018-04-10', 'Tuesday, 10 April 2018, 08:15:39.980 PM'),
+(9, 'TechGuy', '31407936', 10000, 10000, 0, '2018-04-11', 'Wednesday, 11 April 2018, 06:27:47.566 PM'),
+(10, 'Test123', 'Test123', 13920, 777, 13143, '2018-04-11', 'Wednesday, 11 April 2018, 06:30:49.586 PM'),
+(11, '1111', '1111', 14292.36, 8000, 6292.36, '2018-04-11', 'Wednesday, 11 April 2018, 06:49:26.435 PM');
 
 -- --------------------------------------------------------
 
@@ -179,7 +175,9 @@ CREATE TABLE `store` (
 --
 
 INSERT INTO `store` (`ID`, `Mname`, `Mserial`, `Mquantity`, `BuyingPrice`, `Mcost`, `TotalTax`, `Mtotalcost`, `Medate`, `Msection`, `Mprescription`, `Mdistributer`, `Mcategory`, `Mreport`, `TaxType`, `UpdatedOn`, `LastEdited`) VALUES
-(1, '111', '1111', 1103, 11, 11, 1941.28, 14074.28, '2018-04-30', 'Dispensary', '1111', '111', '111', '1111', 'Taxable', 'Wednesday, 11 April 2018, 09:55:12.507 AM', 'Wednesday, 11 April 2018, 09:55:12.507 AM');
+(1, '111', '1111', 70, 11, 20, -716.16, -1879.2, '2018-04-30', 'Dispensary', '1111', '111', '111', '1111', 'Taxable', 'Wednesday, 11 April 2018, 07:33:08.996 PM', 'Wednesday, 11 April 2018, 09:55:12.507 AM'),
+(3, 'Boom', 'Tech', 90, 20, 30, -294.4, -348, '2018-04-30', 'Control Drugs', '1x3', 'java', 'generic', 'java s cool', 'Taxable', 'Wednesday, 11 April 2018, 07:04:12.049 PM', 'Wednesday, 11 April 2018, 07:01:34.195 PM'),
+(4, 'Test123', 'bbb', 15, 10, 30, -152, -1102, '2018-04-30', 'Dispensary', '1x3', 'japan', 'generic', 'Working', 'Taxable', 'Thursday, 12 April 2018, 03:09:19.867 PM', 'Thursday, 12 April 2018, 03:06:01.185 PM');
 
 -- --------------------------------------------------------
 
@@ -199,7 +197,7 @@ CREATE TABLE `systemtimer` (
 --
 
 INSERT INTO `systemtimer` (`ID`, `Timer`, `SystemLimit`, `SecretCode`) VALUES
-(1, '2018-04-12', 'Wednesday, 11 April 2018', '9764b3e480d579097d8d2a2d7ab01ffbba3188c01e42f8462c7365ff2fa2ed9a27c2bee90af253aeb967b5fc793b40c06bb1539be061ff50a2e57966ab4b5466');
+(1, '2018-05-31', '2018-05-31', '744370b9e23daa8f083b33c260b345c489c3a5a8d4ffedcbcb642743a2f5428240672855971cc11fcc7daf3a56e9d501af46283f8838309af6076ef56b238c3a');
 
 -- --------------------------------------------------------
 
@@ -228,7 +226,9 @@ CREATE TABLE `tablecritical` (
 --
 
 INSERT INTO `tablecritical` (`ID`, `Mname`, `Mserial`, `StockIn`, `TaxIn`, `StockInCost`, `StockOut`, `TaxOut`, `StockOutCost`, `Profit`, `Loss`, `UpdatedOn`, `LastEdited`) VALUES
-(1, '111', '1111', 1111, 1955.36, 14176.36, 8, 14.080000000000002, 102.08, 0, 14074.28, 'Wednesday, 11 April 2018, 11:24:36.206 AM', 'Wednesday, 11 April 2018, 10:04:30.485 AM');
+(1, '111', '1111', 1111, 1955.36, 14176.36, 30, 96, 696, 0, 13480.36, 'Thursday, 12 April 2018, 03:47:29.788 PM', 'Wednesday, 11 April 2018, 10:04:30.485 AM'),
+(3, 'Boom', 'Tech', 300, 960, 6960, 10, 48, 348, 0, 6612, 'Thursday, 12 April 2018, 03:47:29.788 PM', 'Wednesday, 11 April 2018, 08:22:20.810 PM'),
+(4, 'Test123', 'bbb', 100, 160, 1160, 85, 312, 2262, 1102, 0, 'Thursday, 12 April 2018, 03:47:29.788 PM', 'Thursday, 12 April 2018, 03:08:30.115 PM');
 
 -- --------------------------------------------------------
 
@@ -259,7 +259,10 @@ INSERT INTO `tabledistributers` (`ID`, `Mserial`, `Dname`, `Mname`, `Mquantity`,
 (5, 'fdf', 'dfd', 'tets', 20, 232, NULL, 232, 'Sunday, 08 April 2018, 05:31:32.470 PM'),
 (6, 'rrrrrrr', 'rrrrrrr', 'rrrrrrr', 30, 348, 300, 48, 'Tuesday, 10 April 2018, 08:15:39.980 PM'),
 (7, '1111', '111', '111', 1111, 14176.36, NULL, 14176.36, 'Wednesday, 11 April 2018, 09:55:12.507 AM'),
-(8, '11111', '1111', '1111', 111, 14292.36, NULL, 14292.36, 'Wednesday, 11 April 2018, 10:02:16.752 AM');
+(8, '11111', '1111', '1111', 111, 14292.36, 8000, 6292.360000000001, 'Wednesday, 11 April 2018, 06:49:26.435 PM'),
+(9, 'Test123', 'Test123', 'Test123', 300, 13920, 777, 13143, 'Wednesday, 11 April 2018, 06:30:49.586 PM'),
+(10, 'Tech', 'java', 'Boom', 300, 6960, NULL, 6960, 'Wednesday, 11 April 2018, 07:01:34.195 PM'),
+(11, 'bbb', 'japan', 'Test123', 100, 1160, NULL, 1160, 'Thursday, 12 April 2018, 03:06:01.185 PM');
 
 -- --------------------------------------------------------
 
@@ -289,8 +292,14 @@ CREATE TABLE `tablesell` (
 --
 
 INSERT INTO `tablesell` (`ID`, `Mname`, `Mserial`, `Mtotalquantity`, `Bcost`, `Mcost`, `TotalTax`, `Tamount`, `Mtotalcost`, `CashPaid`, `ChangePaid`, `Msolddate`, `LastEdited`, `Invoice`) VALUES
-(10, '111', '1111', 5, 11, 11, 8.8, 55, 63.8, 55, 0, '2018-04-11', 'Wednesday, 11 April 2018, 11:17:25.269 AM', '-1634989860269'),
-(11, '111', '1111', 3, 11, 11, 5.28, 33, 38.28, 33, 0, '2018-04-11', 'Wednesday, 11 April 2018, 11:18:05.737 AM', '-701288619737');
+(1, 'Boom', 'Tech', 5, 20, 30, 24, 150, 174, 200, 50, '2018-04-11', 'Wednesday, 11 April 2018, 08:15:45.257 PM', '-418401756257'),
+(2, '111', '1111', 20, 11, 20, 64, 400, 464, 400, 0, '2018-04-11', 'Wednesday, 11 April 2018, 08:21:28.276 PM', '-1071640177276'),
+(3, 'Boom', 'Tech', 5, 20, 30, 24, 150, 174, 150, 0, '2018-04-11', 'Wednesday, 11 April 2018, 08:24:37.390 PM', '1848799760390'),
+(4, '111', '1111', 10, 11, 20, 32, 200, 232, 200, 0, '2018-04-11', 'Wednesday, 11 April 2018, 08:45:26.562 PM', '-1127122138562'),
+(5, 'Test123', 'bbb', 10, 10, 10, 16, 100, 116, 100, 0, '2018-04-12', 'Thursday, 12 April 2018, 03:06:48.817 PM', '-981766793817'),
+(6, 'Test123', 'bbb', 20, 10, 10, 32, 200, 232, 200, 0, '2018-04-12', 'Thursday, 12 April 2018, 03:07:36.059 PM', '1838985234059'),
+(7, 'Test123', 'bbb', 50, 10, 30, 240, 1500, 1740, 2000, 500, '2018-04-12', 'Thursday, 12 April 2018, 03:12:53.846 PM', '657379199846'),
+(8, 'Test123', 'bbb', 5, 10, 30, 24, 150, 174, 200, 50, '2018-04-12', 'Thursday, 12 April 2018, 03:13:34.555 PM', '-121956415555');
 
 -- --------------------------------------------------------
 
@@ -312,7 +321,9 @@ CREATE TABLE `tablestockin` (
 --
 
 INSERT INTO `tablestockin` (`ID`, `Mname`, `Mserial`, `Mtotalquantity`, `TotalTax`, `Mtotalcost`) VALUES
-(1, '111', '1111', 1111, 1955.36, 14176.36);
+(1, '111', '1111', 1111, 1955.36, 14176.36),
+(3, 'Boom', 'Tech', 300, 960, 6960),
+(4, 'Test123', 'bbb', 100, 160, 1160);
 
 -- --------------------------------------------------------
 
@@ -336,7 +347,7 @@ CREATE TABLE `userlogin` (
 --
 
 INSERT INTO `userlogin` (`NationalID`, `username`, `personalnumber`, `password`, `Salary`, `Payed`, `Balance`, `LastEdited`) VALUES
-(12345678, 'Test123', '123', '8cafed2235386cc5855e75f0d34f103ccc183912e5f02446b77c66539f776e4bf2bf87339b4518a7cb1c2441c568b0f8', 3000, 2600, 400, 'Tuesday, 10 April 2018, 08:12:51.407 PM');
+(12345678, 'Test123', '123', '8cafed2235386cc5855e75f0d34f103ccc183912e5f02446b77c66539f776e4bf2bf87339b4518a7cb1c2441c568b0f8', 3000, 3000, 0, 'Wednesday, 11 April 2018, 06:27:47.566 PM');
 
 --
 -- Indexes for dumped tables
@@ -430,13 +441,13 @@ ALTER TABLE `pastrecords`
 -- AUTO_INCREMENT for table `pastsoldrecords`
 --
 ALTER TABLE `pastsoldrecords`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `paymentrecords`
 --
 ALTER TABLE `paymentrecords`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `store`
@@ -454,25 +465,25 @@ ALTER TABLE `systemtimer`
 -- AUTO_INCREMENT for table `tablecritical`
 --
 ALTER TABLE `tablecritical`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tabledistributers`
 --
 ALTER TABLE `tabledistributers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tablesell`
 --
 ALTER TABLE `tablesell`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tablestockin`
 --
 ALTER TABLE `tablestockin`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
