@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2018 at 03:30 PM
+-- Generation Time: Apr 12, 2018 at 05:51 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -44,7 +44,7 @@ CREATE TABLE `adminlogin` (
 --
 
 INSERT INTO `adminlogin` (`NationalID`, `username`, `personalnumber`, `password`, `Salary`, `Payed`, `Balance`, `LastEdited`) VALUES
-(31407936, 'TechGuy', '6668', '411c421547c72abf0fd9cb8d0d0f960b19ac74d1f2728ba9e8ab7d156b8dc6ca287a358a0a9e21c5598ea2ead7736a51', 10000, 10000, 0, 'Wednesday, 11 April 2018, 06:27:47.566 PM');
+(12345678, 'TechGuy', '6668', '8cafed2235386cc5855e75f0d34f103ccc183912e5f02446b77c66539f776e4bf2bf87339b4518a7cb1c2441c568b0f8', 10000, 10000, 0, 'Wednesday, 11 April 2018, 06:27:47.566 PM');
 
 -- --------------------------------------------------------
 
