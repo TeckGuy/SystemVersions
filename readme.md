@@ -1,4 +1,4 @@
-					       Pharmacy Management System Versions  
+					       Inventory Management System Versions  
 							 Developed by 
 							 
 						    https://tecksolke.com/
